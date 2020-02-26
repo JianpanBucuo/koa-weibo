@@ -15,7 +15,7 @@ const path = require('path')
 
 const config = require('../config')
 const routes = require('./routes')
-
+const userRoutes = require('./routes/users')
 const port = process.env.PORT || config.port
 console.log(process.env.NODE_ENV,'process-env-node-env')
 // error handler
@@ -51,6 +51,7 @@ router.get('/', async (ctx, next) => {
 })
 
 routes(router)
+userRoutes(router)
 app.on('error', function(err, ctx) {
   console.log(err)
   logger.error('server error', err, ctx)
