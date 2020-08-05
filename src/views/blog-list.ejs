@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/css/style.css' />
+  <style>
+    .blog-list{
+
+    }
+    .blog-item{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .blog-item span {
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+    <%- include('widgets/header',{
+
+    }); %>
+  <h1><%= title %></h1>
+
+  <p>EJS Welcome to <%= title %></p>
+  <div>
+    <button id="blog-btn">查询博客列表</button>
+    <div class="blog-list">
+
+    </div>
+  </div>
+
+
+
+  <%- include('widgets/footer',{
+
+  }); %>
+  <script>
+    $('#blog-btn').on('click',function() {
+      ajaxEvent('post','/api/blog/list',{
+        }, function(res) {
+             if(res.code == '0000') {
+              $('.blog-list').empty()
+                $('.blog-list').append(renderBlogList(res.data))
+             }
+      })
+    })
+    function renderBlogList (blogList) {
+      let html = ''
+      blogList.map(item => {
+        html += `<p class='blog-item'>
+              <span>${item.content}</span>
+              <img src=${item.image}>
+          </p>`
+      })
+      return html
+    }
+
+
+  </script>
+</body>
+
+</html>

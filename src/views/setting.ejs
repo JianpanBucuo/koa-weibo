@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/css/reset.css' />
+  <link rel='stylesheet' href='/css/style.css' />
+  <style>
+      p {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      input{
+        margin-left: 10px;
+      }
+
+  </style>
+</head>
+
+<body>
+  <%- include('widgets/header',{
+
+    }); %>
+
+  <% if (locals.isLogin) { %>
+  <h3>修改个人信息</h3>
+  <p>姓名<input id="userName" value="<%= locals.userName %>"></p>
+  <p>昵称<input id="nickName" value="<%= locals.nickName %>"></p>
+  <p>城市<input id="city" value="<%= locals.city %>"></p>
+  <p>图片<input id="img-input" type="file"  >
+  <img id="img-src" src="<%= locals.picture %>"></p>
+  <button id="changInfo">提交</button>
+  <% } %>
+
+  <%- include('widgets/footer',{
+
+  }); %>
+  <script>
+    $('#changInfo').on('click',function(){
+          ajaxEvent('post', '/api/user/change', {
+            nickName:$('#nickName').val(),
+            city:$('#city').val(),
+            picture:$('#img-src').attr('src')
+          },function(res) {
+              console.log(res)
+          }
+        )
+    })
+    $('.logout').on('click',function() {
+      ajaxEvent('post','/api/user/logout',{
+
+        }, function(res) {
+            console.log(res)
+            window.location.reload()
+      })
+    })
+
+    $('#img-input').on('change',function(e) {
+        let file = $(this)[0].files[0]
+        console.log(file)
+        let formData = new FormData()
+        formData.append('file',file)
+
+        $.ajax({
+            type: 'post',
+            url: '/utils/upload',
+            data: formData,
+
+            contentType:false,
+            processData:false,
+            success: function(res){
+               $('#img-src').attr('src',res.data.url)
+            },
+            error: function(e){
+              console.log(e)
+            }
+  })
+    })
+
+  </script>
+</body>
+
+
+</html>

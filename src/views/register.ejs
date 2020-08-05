@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/css/reset.css' />
+  <link rel='stylesheet' href='/css/style.css' />
+  <style>
+      p {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      input{
+        margin-left: 10px;
+      }
+
+  </style>
+</head>
+
+<body>
+  <%- include('widgets/header',{
+
+    }); %>
+
+  <% if (locals.isLogin) { %>
+  <p><%= locals.userName %> </p>
+  <% } else { %>
+  <p>请注册</p>
+  <p>用户名 <input id="username" type="text" ></p>
+  <p>密码<input id="password" type="text"></p>
+  <p>
+    性别  <label><input name="gender" type="radio" value="0" />男 </label>
+    <label><input name="gender" type="radio" value="1" />女 </label>
+  </p>
+
+  <button class="register">注册</button>
+
+  <% } %>
+
+  <%- include('widgets/footer',{
+
+  }); %>
+  <script>
+    $('#username').on('blur',ifUserNameExist)
+      function ifUserNameExist() {
+        ajaxEvent('post','/api/user/isExist',{
+            userName:$('#username').val()
+        }, function(res) {
+            console.log(res)
+      })
+    }
+    $('.register').on('click',function() {
+      ajaxEvent('post','/api/user/register',{
+            userName:$('#username').val(),
+            passWord:$('#password').val(),
+            gender: $('input[name="gender"]:checked').val()
+        }, function(res) {
+            console.log(res)
+      })
+    })
+
+  </script>
+</body>
+
+
+</html>

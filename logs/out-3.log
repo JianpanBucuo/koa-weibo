@@ -1,0 +1,273 @@
+2020-03-27 10:14:53: production process-env-node-env
+2020-03-27 10:14:53: Listening on http://localhost:3001
+2020-03-27 10:15:27:   <-- GET /
+2020-03-27 10:15:27:   --> GET / 200 24ms 931b
+2020-03-27 10:15:27:   <-- GET /css/style.css
+2020-03-27 10:15:27:   <-- GET /js/common.js
+2020-03-27 10:15:27:   <-- GET /yzsf-gl@2x.png
+2020-03-27 10:15:27:   --> GET /css/style.css 200 8ms 94b
+2020-03-27 10:15:27:   --> GET /js/common.js 200 9ms 280b
+2020-03-27 10:15:27:   --> GET /yzsf-gl@2x.png 200 9ms 2.43kb
+2020-03-27 10:15:28:   <-- GET /favicon.ico
+2020-03-27 10:15:28:   --> GET /favicon.ico 200 4ms 56b
+2020-03-27 10:15:29:   <-- GET /
+2020-03-27 10:15:29:   --> GET / 200 11ms 931b
+2020-03-27 10:15:29:   <-- GET /css/style.css
+2020-03-27 10:15:29:   <-- GET /yzsf-gl@2x.png
+2020-03-27 10:15:29:   --> GET /css/style.css 200 4ms 94b
+2020-03-27 10:15:29:   --> GET /yzsf-gl@2x.png 200 6ms 2.43kb
+2020-03-27 10:15:29:   <-- GET /js/common.js
+2020-03-27 10:15:29:   --> GET /js/common.js 200 3ms 280b
+2020-03-27 10:15:29:   <-- GET /favicon.ico
+2020-03-27 10:15:29:   --> GET /favicon.ico 200 3ms 56b
+2020-03-27 10:16:31:   <-- GET /login?url
+2020-03-27 10:16:31: { isLogin: false }
+2020-03-27 10:16:31:   --> GET /login?url 200 19ms 1.2kb
+2020-03-27 10:16:31:   <-- GET /css/reset.css
+2020-03-27 10:16:31:   --> GET /css/reset.css 200 1ms 1.52kb
+2020-03-27 10:16:31:   <-- GET /css/style.css
+2020-03-27 10:16:31:   --> GET /css/style.css 200 5ms 94b
+2020-03-27 10:16:31:   <-- GET /js/common.js
+2020-03-27 10:16:31:   --> GET /js/common.js 200 2ms 280b
+2020-03-27 10:16:31:   <-- GET /favicon.ico
+2020-03-27 10:16:31:   --> GET /favicon.ico 200 3ms 56b
+2020-03-27 10:16:34:   <-- POST /api/user/login
+2020-03-27 10:16:34: ltzf 1a49b46d5bbe6ac2faf1fdae44469ff4
+2020-03-27 10:16:34: Executing (default): SELECT `id`, `userName`, `nickName`, `picture`, `city`, `passWord` FROM `users` AS `user` WHERE `user`.`userName` = 'ltzf' AND `user`.`passWord` = '1a49b46d5bbe6ac2faf1fdae44469ff4';
+2020-03-27 10:16:34:   --> POST /api/user/login 200 163ms 40b
+2020-03-27 10:16:34: Reply: OK
+2020-03-27 10:16:53:   <-- GET /setting
+2020-03-27 10:16:53: 1585275394806_0.47943369310472295 userId
+2020-03-27 10:16:53: { isLogin: true,
+  id: 1,
+  userName: 'ltzf',
+  nickName: '',
+  picture: 'xxx',
+  city: null,
+  passWord: '1a49b46d5bbe6ac2faf1fdae44469ff4' }
+2020-03-27 10:16:53:   --> GET /setting 200 50ms 1.93kb
+2020-03-27 10:16:53:   <-- GET /css/reset.css
+2020-03-27 10:16:53:   --> GET /css/reset.css 200 3ms 1.52kb
+2020-03-27 10:16:53:   <-- GET /css/style.css
+2020-03-27 10:16:53:   <-- GET /xxx
+2020-03-27 10:16:53:   --> GET /css/style.css 200 2ms 94b
+2020-03-27 10:16:53:   <-- GET /js/common.js
+2020-03-27 10:16:53:   --> GET /js/common.js 200 8ms 280b
+2020-03-27 10:16:53:   --> GET /xxx 200 11ms 56b
+2020-03-27 10:16:54:   <-- GET /favicon.ico
+2020-03-27 10:16:54:   --> GET /favicon.ico 200 3ms 56b
+2020-03-27 10:16:59:   <-- POST /utils/upload
+2020-03-27 10:16:59: 1585275394806_0.47943369310472295 userId
+2020-03-27 10:16:59: ctx {}
+2020-03-27 10:16:59: ctx { file:
+   File {
+     _events: [Object: null prototype] {},
+     _eventsCount: 0,
+     _maxListeners: undefined,
+     size: 640,
+     path:
+      'E:\\OWN\\eg\\node-weibo\\koa2-weibo\\src\\routes\\api\\upload_09f4db82d33e468ff08fb7cbc1e3d35d.png',
+     name: 'icon-check.png',
+     type: 'image/png',
+     hash: null,
+     lastModifiedDate: 2020-03-27T02:16:59.753Z,
+     _writeStream:
+      WriteStream {
+        _writableState: [WritableState],
+        writable: false,
+        _events: [Object: null prototype] {},
+        _eventsCount: 0,
+        _maxListeners: undefined,
+        path:
+         'E:\\OWN\\eg\\node-weibo\\koa2-weibo\\src\\routes\\api\\upload_09f4db82d33e468ff08fb7cbc1e3d35d.png',
+        fd: null,
+        flags: 'w',
+        mode: 438,
+        start: undefined,
+        autoClose: true,
+        pos: undefined,
+        bytesWritten: 640,
+        closed: false } } }
+2020-03-27 10:16:59: in upload
+2020-03-27 10:16:59: 640 'E:\\OWN\\eg\\node-weibo\\koa2-weibo\\src\\routes\\api\\upload_09f4db82d33e468ff08fb7cbc1e3d35d.png' 'icon-check.png' 'image/png'
+2020-03-27 10:16:59: controller icon-check.png image/png 640 E:\OWN\eg\node-weibo\koa2-weibo\src\routes\api\upload_09f4db82d33e468ff08fb7cbc1e3d35d.png
+2020-03-27 10:16:59:   --> POST /utils/upload 200 51ms 77b
+2020-03-27 10:16:59:   <-- GET /1585275419755.icon-check.png
+2020-03-27 10:16:59:   --> GET /1585275419755.icon-check.png 200 3ms 640b
+2020-03-27 10:17:20:   <-- GET /error
+2020-03-27 10:17:20:   --> GET /error 200 9ms 44b
+2020-03-27 10:17:20:   <-- GET /favicon.ico
+2020-03-27 10:17:20:   --> GET /favicon.ico 200 3ms 56b
+2020-03-27 10:17:29:   <-- GET /11
+2020-03-27 10:17:29:   --> GET /11 200 9ms 56b
+2020-03-27 10:17:29:   <-- GET /favicon.ico
+2020-03-27 10:17:29:   --> GET /favicon.ico 200 2ms 56b
+2020-03-27 10:17:58:   <-- GET /register?url
+2020-03-27 10:17:58:   --> GET /register?url 200 32ms 1.47kb
+2020-03-27 10:17:58:   <-- GET /css/reset.css
+2020-03-27 10:17:58:   --> GET /css/reset.css 200 2ms 1.52kb
+2020-03-27 10:17:58:   <-- GET /css/style.css
+2020-03-27 10:17:58:   --> GET /css/style.css 200 3ms 94b
+2020-03-27 10:17:58:   <-- GET /js/common.js
+2020-03-27 10:17:58:   --> GET /js/common.js 200 2ms 280b
+2020-03-27 10:17:58:   <-- GET /favicon.ico
+2020-03-27 10:17:58:   --> GET /favicon.ico 200 5ms 56b
+2020-03-27 10:18:02:   <-- POST /api/user/isExist
+2020-03-27 10:18:02: jinjian undefined
+2020-03-27 10:18:02: Executing (default): SELECT `id`, `userName`, `nickName`, `picture`, `city`, `passWord` FROM `users` AS `user` WHERE `user`.`userName` = 'jinjian';
+2020-03-27 10:18:02:   --> POST /api/user/isExist 200 9ms 49b
+2020-03-27 10:18:06:   <-- GET /css/reset.css
+2020-03-27 10:18:06:   --> GET /css/reset.css 200 6ms 1.52kb
+2020-03-27 10:18:06:   <-- GET /css/style.css
+2020-03-27 10:18:06:   --> GET /css/style.css 200 3ms 94b
+2020-03-27 10:18:08:   <-- POST /api/user/register
+2020-03-27 10:18:08: { request:
+   { method: 'POST',
+     url: '/api/user/register',
+     header:
+      { host: 'localhost:3001',
+        connection: 'keep-alive',
+        'content-length': '38',
+        pragma: 'no-cache',
+        'cache-control': 'no-cache',
+        accept: 'application/json, text/javascript, */*; q=0.01',
+        'sec-fetch-dest': 'empty',
+        'x-requested-with': 'XMLHttpRequest',
+        'user-agent':
+         'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        origin: 'http://localhost:3001',
+        'sec-fetch-site': 'same-origin',
+        'sec-fetch-mode': 'cors',
+        referer: 'http://localhost:3001/register?url',
+        'accept-encoding': 'gzip, deflate, br',
+        'accept-language': 'zh-CN,zh;q=0.9',
+        cookie:
+         'userId=1585275394806_0.47943369310472295; userId.sig=fRAE7efdJAlS5kmJ9LNCowTiqug' } },
+  response:
+   { status: 404,
+     message: 'Not Found',
+     header: [Object: null prototype] {} },
+  app: { subdomainOffset: 2, proxy: false, env: 'production' },
+  originalUrl: '/api/user/register',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>' }
+2020-03-27 10:18:08: jinjian undefined
+2020-03-27 10:18:08: Executing (default): SELECT `id`, `userName`, `nickName`, `picture`, `city`, `passWord` FROM `users` AS `user` WHERE `user`.`userName` = 'jinjian';
+2020-03-27 10:18:08: null
+2020-03-27 10:18:08: Executing (default): INSERT INTO `users` (`id`,`userName`,`passWord`,`nickName`,`gender`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?);
+2020-03-27 10:18:08: result.dataValues user {
+  dataValues:
+   { id: 2,
+     userName: 'jinjian',
+     passWord: '1a49b46d5bbe6ac2faf1fdae44469ff4',
+     gender: '0',
+     nickName: '',
+     updatedAt: 2020-03-27T02:18:08.373Z,
+     createdAt: 2020-03-27T02:18:08.373Z },
+  _previousDataValues:
+   { userName: 'jinjian',
+     passWord: '1a49b46d5bbe6ac2faf1fdae44469ff4',
+     gender: '0',
+     nickName: '',
+     id: 2,
+     picture: undefined,
+     city: undefined,
+     createdAt: 2020-03-27T02:18:08.373Z,
+     updatedAt: 2020-03-27T02:18:08.373Z },
+  _changed:
+   { userName: false,
+     passWord: false,
+     gender: false,
+     nickName: false,
+     id: false,
+     picture: false,
+     city: false,
+     createdAt: false,
+     updatedAt: false },
+  _modelOptions:
+   { timestamps: true,
+     validate: {},
+     freezeTableName: false,
+     underscored: false,
+     paranoid: false,
+     rejectOnEmpty: false,
+     whereCollection: { userName: 'jinjian' },
+     schema: null,
+     schemaDelimiter: '',
+     defaultScope: {},
+     scopes: {},
+     indexes: [],
+     name: { plural: 'users', singular: 'user' },
+     omitNull: false,
+     sequelize:
+      Sequelize {
+        options: [Object],
+        config: [Object],
+        dialect: [MysqlDialect],
+        queryInterface: [QueryInterface],
+        models: [Object],
+        modelManager: [ModelManager],
+        connectionManager: [ConnectionManager],
+        importCache: {} },
+     hooks: {} },
+  _options:
+   { isNewRecord: true,
+     _schema: null,
+     _schemaDelimiter: '',
+     attributes: undefined,
+     include: undefined,
+     raw: undefined,
+     silent: undefined },
+  isNewRecord: false }
+2020-03-27 10:18:08:   --> POST /api/user/register 200 153ms 40b
+2020-03-27 10:21:05: production process-env-node-env
+2020-03-27 10:21:05: Listening on http://localhost:3001
+2020-03-27 10:21:08: production process-env-node-env
+2020-03-27 10:21:08: Listening on http://localhost:3001
+2020-03-27 10:21:12: production process-env-node-env
+2020-03-27 10:21:12: Listening on http://localhost:3001
+2020-03-27 10:21:15: production process-env-node-env
+2020-03-27 10:21:15: Listening on http://localhost:3001
+2020-03-27 10:21:18: production process-env-node-env
+2020-03-27 10:21:18: Listening on http://localhost:3001
+2020-03-27 10:21:21: production process-env-node-env
+2020-03-27 10:21:21: Listening on http://localhost:3001
+2020-03-27 10:21:27: production process-env-node-env
+2020-03-27 10:21:27: Listening on http://localhost:3001
+2020-03-27 10:21:31: production process-env-node-env
+2020-03-27 10:21:31: Listening on http://localhost:3001
+2020-03-27 10:21:34: production process-env-node-env
+2020-03-27 10:21:34: Listening on http://localhost:3001
+2020-03-27 10:21:42: production process-env-node-env
+2020-03-27 10:21:42: Listening on http://localhost:3001
+2020-03-27 10:21:49: production process-env-node-env
+2020-03-27 10:21:49: Listening on http://localhost:3001
+2020-03-27 10:21:55: production process-env-node-env
+2020-03-27 10:21:56: Listening on http://localhost:3001
+2020-03-27 10:22:08: production process-env-node-env
+2020-03-27 10:22:12: production process-env-node-env
+2020-03-27 10:22:12: Listening on http://localhost:3001
+2020-03-27 10:22:17: production process-env-node-env
+2020-03-27 10:22:17: Listening on http://localhost:3001
+2020-03-27 10:22:21: production process-env-node-env
+2020-03-27 10:22:21: Listening on http://localhost:3001
+2020-03-27 10:22:26: production process-env-node-env
+2020-03-27 10:22:26: Listening on http://localhost:3001
+2020-03-27 10:22:29: production process-env-node-env
+2020-03-27 10:22:29: Listening on http://localhost:3001
+2020-03-27 10:22:32: production process-env-node-env
+2020-03-27 10:22:32: Listening on http://localhost:3001
+2020-03-27 10:22:36: production process-env-node-env
+2020-03-27 10:22:36: Listening on http://localhost:3001
+2020-03-27 10:22:39: production process-env-node-env
+2020-03-27 10:22:39: Listening on http://localhost:3001
+2020-03-27 10:22:42: production process-env-node-env
+2020-03-27 10:22:42: Listening on http://localhost:3001
+2020-03-27 10:22:51: production process-env-node-env
+2020-03-27 10:22:51: Listening on http://localhost:3001
+2020-03-27 10:22:54: production process-env-node-env
+2020-03-27 10:22:54: Listening on http://localhost:3001
+2020-03-27 10:22:57: production process-env-node-env
+2020-03-27 10:22:57: Listening on http://localhost:3001

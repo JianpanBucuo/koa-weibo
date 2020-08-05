@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/css/reset.css' />
+  <link rel='stylesheet' href='/css/style.css' />
+  <style>
+      p {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      input{
+        margin-left: 10px;
+      }
+
+  </style>
+</head>
+
+<body>
+  <%- include('widgets/header',{
+
+    }); %>
+
+  <% if (locals.isLogin) { %>
+  <p><%= locals.userName %> </p>
+  <button class="logout">退出登录</button>
+  <% } else { %>
+  <p>请登录</p>
+  <p>用户名 <input id="username" type="text" ></p>
+  <p>密码<input id="password" type="text"></p>
+
+
+  <button class="login">登录</button>
+  <% } %>
+
+  <%- include('widgets/footer',{
+
+  }); %>
+  <script>
+    $('.logout').on('click',function() {
+      ajaxEvent('post','/api/user/logout',{
+
+        }, function(res) {
+            console.log(res)
+            window.location.reload()
+      })
+    })
+    $('.login').on('click',function() {
+      ajaxEvent('post','/api/user/login',{
+            userName:$('#username').val(),
+            passWord:$('#password').val(),
+        }, function(res) {
+            console.log(res)
+
+      })
+    })
+  </script>
+</body>
+
+
+</html>
